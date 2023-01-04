@@ -7,7 +7,8 @@ def init_webdriver():
     chrome_options = Options()
     chrome_options.add_argument("--headless")  # Режим без интерфейса
     # chrome_options.add_argument('--start-fullscreen')
-    chrome_options.add_argument("--window-size=1920x1080")
+    # Не работает
+    # chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument("--disable-popup-blocking")
@@ -23,6 +24,10 @@ def init_webdriver():
     #в режиме headless без user-agent не загружает страницу
     chrome_options.add_argument("user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
                                 " AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"'')
+
+    # Или используйте настройки ниже, чтобы увеличить скорость
+    chrome_options.add_argument('blink-settings=imagesEnabled=false')
+
     # self.driver = webdriver.Chrome('C:\\install\\chromedriver.exe', options=chrome_options)
     # driver = webdriver.Chrome('./driver/chromedriver.exe', options=chrome_options)
 
