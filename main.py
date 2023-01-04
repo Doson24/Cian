@@ -86,6 +86,9 @@ def main():
     save_file(driver)
     time.sleep(1)
     authorization(driver)
+    time.sleep(10)
+    driver.quit()
+    #добавить првоерку на сохранеие
 
 
 if __name__ == '__main__':
