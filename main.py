@@ -87,6 +87,16 @@ def main():
     time.sleep(1)
     authorization(driver)
     time.sleep(10)
+    error = driver.find_element(By.CLASS_NAME, '_93444fe79c--color_white_100--YUO3d.'
+                                               '_93444fe79c--lineHeight_5u--cJ35s.'
+                                               '_93444fe79c--fontWeight_normal--P9Ylg.'
+                                               '_93444fe79c--fontSize_14px--TCfeJ.'
+                                               '_93444fe79c--display_block--pDAEx.'
+                                               '_93444fe79c--text--g9xAG.'
+                                               '_93444fe79c--text_letterSpacing__0--mdnqq')
+    if error:
+        print('[-] DownloadError: Превышен лимит скачиваний для некоммерческого использования, попробуйте завтра')
+        time.sleep(300)
     driver.quit()
     #добавить првоерку на сохранеие
 
